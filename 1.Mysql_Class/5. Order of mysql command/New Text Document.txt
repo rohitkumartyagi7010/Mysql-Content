@@ -1,0 +1,1 @@
+https://www.shiksha.com/online-courses/articles/order-of-execution-in-sql/#:~:text=The%20correct%20order%20of%20execution,ORDER%20BY%20query%20in%20SQL%3F

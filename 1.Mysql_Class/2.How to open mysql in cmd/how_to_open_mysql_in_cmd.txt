@@ -1,0 +1,9 @@
+how to open mysql in cmd
+
+copy below path and set environment variable
+C:\Program Files\MySQL\MySQL Server 8.0\bin  
+
+after that you need to run below command
+
+C:\Users\rkt65>mysql -u root -p
+Enter password: *****

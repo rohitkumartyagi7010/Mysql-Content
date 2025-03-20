@@ -1,0 +1,24 @@
+CREATE DATABASE practice;
+USE practice;
+CREATE TABLE department (
+    department_id INT AUTO_INCREMENT PRIMARY KEY,
+    department_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE employee (
+    employee_id INT AUTO_INCREMENT PRIMARY KEY,
+    employee_name VARCHAR(100) NOT NULL,
+    department_id INT,
+    hire_date DATE,
+    CONSTRAINT fk_department FOREIGN KEY (department_id) REFERENCES department(department_id)
+);
+
+
+
+CONSTRAINT fk_department: This specifies the name of the foreign key constraint. In this case, it's named fk_department.
+
+FOREIGN KEY (department_id): This indicates that the department_id column in the employee table is the foreign key column. A foreign key is a column or a set of columns in one table that uniquely identifies a row of another table.
+
+REFERENCES department(department_id): This specifies the referenced table and column for the foreign key constraint. It means that the department_id column in the employee table references the department_id column in the department table. In other words, the values in the department_id column of the employee table must exist in the department_id column of the department table. This ensures referential integrity between the two tables, meaning that each employee must belong to a valid department.
+
+So, overall, this line establishes a constraint that ensures that the department_id column in the employee table can only contain values that exist in the department_id column of the department table.

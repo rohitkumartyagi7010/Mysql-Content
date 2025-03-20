@@ -1,0 +1,49 @@
+if you want to save your data from mysql to csv file you might see error:
+
+ERROR 1290 (HY000): The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
+
+in this case you can store you file at 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/ 
+location only see below code it will create a file at which location.
+
+Note: / back slash should be in path
+
+To know your location you can find path by using below command:
+
+mysql> SHOW VARIABLES LIKE "secure_file_priv";
++------------------+------------------------------------------------+
+| Variable_name    | Value                                          |
++------------------+------------------------------------------------+
+| secure_file_priv | C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\ |
++------------------+------------------------------------------------+
+1 row in set (0.00 sec)
+
+Note: Remember to change the back slash save file C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\
+
+
+SELECT * FROM actor
+INTO OUTFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/rohit_actor_table2.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+#######################################################
+You may want to add a timestamp to the exported file, to do that you must use a MySQL prepared statement.
+
+Use the following command to export to a CSV file, and add a timestamp for the time the file was created:
+
+######################################################
+
+Note:Select Database first
+Use sakila;
+
+SET @TS = DATE_FORMAT(NOW(),'_%Y_%m_%d_%H_%i_%s');
+SET @FOLDER = 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/rohit_actor_table2.csv';
+SET @PREFIX = 'employees';
+SET @EXT    = '.csv';
+SET @CMD = CONCAT("SELECT * FROM actor INTO OUTFILE '",@FOLDER,@PREFIX,@TS,@EXT,
+"' FIELDS ENCLOSED BY '"
+' TERMINATED BY ',' 
+ESCAPED BY '"'",
+"LINES TERMINATED BY 'n';");
+PREPARE statement FROM @CMD;
+EXECUTE statement;

@@ -1,0 +1,7 @@
+https://dev.mysql.com/doc/refman/8.0/en/bit-type.html#:~:text=A%20type%20of%20BIT(%20M,written%20using%20zeros%20and%20
+
+13.1.5 Bit-Value Type - BIT
+The BIT data type is used to store bit values. A type of BIT(M) enables storage of M-bit values. M can range from 1 to 64.
+
+To specify bit values, b'value' notation can be used. value is a binary value written using zeros and ones. For example, b'111' and b'10000000' represent 7 and 128, respectively. 
+

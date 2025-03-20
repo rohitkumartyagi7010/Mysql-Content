@@ -1,0 +1,7 @@
+First you switch to sql mode
+
+just type
+
+\sql  for sql
+\python for python
+\js for javascript

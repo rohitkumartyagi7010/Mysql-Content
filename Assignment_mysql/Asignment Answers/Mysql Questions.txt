@@ -1,0 +1,66 @@
+Q-1. Write an SQL query to fetch “FIRST_NAME” from Worker table using the alias
+name as <WORKER_NAME>.
+
+Q-2. Write an SQL query to fetch unique values of DEPARTMENT from Worker table.
+
+Q-3. Write an SQL query to show the last 5 record from a table.
+
+Q-4. Write an SQL query to print the first three characters of  FIRST_NAME from Worker
+table.
+
+Q-5. Write an SQL query to find the position of the alphabet (‘a’) in the first name
+column ‘Amitabh’ from Worker table.
+
+Q-6. Write an SQL query to print the name of employees having the highest salary in each
+department.
+
+Q-7. Write an SQL query to print the FIRST_NAME from Worker table after removing
+white spaces from the right side.
+
+Q-8. Write an SQL query that fetches the unique values of DEPARTMENT from Worker
+table and prints its length.
+
+Q-9. Write an SQL query to fetch nth max salaries from a table.
+
+Q-10. Write an SQL query to print the FIRST_NAME from Worker table after replacing ‘a’
+with ‘A’.
+
+Q-11. Write an SQL query to print all Worker details from the Worker table order by
+FIRST_NAME Ascending and DEPARTMENT Descending.
+
+Q-12. Write an SQL query to fetch the names of workers who earn the highest salary.
+
+Q-13. Write an SQL query to print details of workers excluding first names, “Vipul” and
+“Satish” from Worker table.
+
+Q-14. Write an SQL query to print details of the Workers whose FIRST_NAME ends with
+‘h’ and contains six alphabets.
+
+Q-15. Write a query to validate Email of Employee.
+
+Q-16. Write an SQL query to print details of the Workers who have joined in Feb’2014.
+
+Q-17. Write an SQL query to fetch duplicate records having matching data in some fields of
+a table.
+
+
+Q-18. How to remove duplicate rows from Employees table.
+
+
+Q-19. Write an SQL query to show only odd rows from a table.
+
+Q-20. Write an SQL query to clone a new table from another table.
+
+Q-21. Write an SQL query to fetch intersecting records of two tables.
+
+Q-22. Write an SQL query to show records from one table that another table does not
+have.
+
+Q-22. Write an SQL query to show the top n (say 10) records of a table.
+
+Q-23. Write an SQL query to determine the nth (say n=5) highest salary from a table.
+
+Q-24. Write an SQL query to determine the 5th highest salary without using TOP or limit
+method.
+
+Q-25. Write an SQL query to fetch the list of employees with the same salary.

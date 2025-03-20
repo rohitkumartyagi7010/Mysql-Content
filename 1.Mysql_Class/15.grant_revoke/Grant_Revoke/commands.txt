@@ -1,0 +1,29 @@
+MySQL Shell 8.0.37
+
+Copyright (c) 2016, 2024, Oracle and/or its affiliates.
+Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
+Other names may be trademarks of their respective owners.
+
+Type '\help' or '\?' for help; '\quit' to exit.
+ MySQL  JS > \sql
+Switching to SQL mode... Commands end with ;
+ MySQL  SQL > \connect root@localhost:3306
+Creating a session to 'root@localhost:3306'
+Please provide the password for 'root@localhost:3306': *****
+Save password for 'root@localhost:3306'? [Y]es/[N]o/Ne[v]er (default No): n
+Fetching global names for auto-completion... Press ^C to stop.
+Your MySQL connection id is 80
+Server version: 8.0.37 MySQL Community Server - GPL
+No default schema selected; type \use <schema> to set one.
+
+ MySQL  localhost:3306 ssl  SQL > CREATE USER 'sachin'@'localhost' IDENTIFIED BY 'admin';
+
+Query OK, 0 rows affected (0.0121 sec)
+
+ MySQL  localhost:3306 ssl  SQL > GRANT SELECT ON sakila.* TO 'sachin'@'localhost';
+
+Query OK, 0 rows affected (0.0063 sec)
+
+ MySQL  localhost:3306 ssl  SQL > FLUSH PRIVILEGES;
+
+Query OK, 0 rows affected (0.0059 sec)
